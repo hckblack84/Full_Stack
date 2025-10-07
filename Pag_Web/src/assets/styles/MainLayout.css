@@ -1,0 +1,18 @@
+footer{
+    background-color: #146c43;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('../images/Logo.png');
+    background-size: 100%; /* Reduce el tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 60px; /* Ajusta según la altura del footer */
+}

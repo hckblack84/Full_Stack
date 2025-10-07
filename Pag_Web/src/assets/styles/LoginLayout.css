@@ -1,0 +1,63 @@
+.login-container {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: TRANSPARENT;
+  padding: 10px;
+}
+
+.login-card {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(145, 40, 40, 0.3);
+  max-width: 400px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-card h2 {
+  color: #333;
+  font-weight: 600;
+}
+
+.login-form .form-control {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.login-form .btn {
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-form .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
