@@ -1,8 +1,22 @@
-.logo{
-    width: 120px;
+/* Navbar fijo en la parte superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra opcional para mejor visual */
 }
 
-.navbar{
-    color: #ffffff;
+/* Logo del navbar */
+.logo {
+  height: 50px; /* Ajusta el tamaño según necesites */
+  width: auto;
+  margin-right: 10px;
 }
 
+
+.nav-link:hover {
+  opacity: 0.8;
+  transition: opacity 5s ease;
+}

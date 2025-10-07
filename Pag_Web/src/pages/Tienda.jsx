@@ -3,8 +3,10 @@ import '../assets/styles/Tienda.css';
 
 function PaginaBasica() {
     return (
-        <header>Hola</header>
-    );
+<div className="tienda-fondo">
+
+
+</div>    );
 }
 
 export default PaginaBasica;

@@ -5,7 +5,7 @@ import '../assets/styles/Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav className="navbar navbar-expand-lg navbar-danger bg-success">
       <div className="container-fluid">
         <img src={Logo} className="logo" alt="Logo Huerto Hogar" />
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

@@ -1,18 +1,21 @@
-import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import '../assets/styles/MainLayout.css';
+import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import "../assets/styles/MainLayout.css";
 
 function MainLayout() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   return (
-    <>
+    <div className={`main-layout ${isHome ? 'with-background' : ''}`}>
       <Navbar />
-      <main className="container mt-4">
+      <main className="content-wrapper">
         <Outlet />
       </main>
-      <footer className="">
+      <footer className="footer">
         <p>© 2024 My Company</p>
       </footer>
-    </>
+    </div>
   );
 }
 

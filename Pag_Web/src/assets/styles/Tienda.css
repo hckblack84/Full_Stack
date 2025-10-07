@@ -1,6 +1,16 @@
 .header{
-    background-color: #f8f9fa;
+    background-color: #196dc2;
     padding: 20px 0;
     text-align: center;
     border-bottom: 2px solid #e0e0e0;
 }
+
+.tienda-fondo{
+    background-color: rgb(247, 46, 46);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+

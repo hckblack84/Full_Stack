@@ -1,18 +1,58 @@
-footer{
-    background-color: #146c43;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 100;
+/* Reset básico */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-body {
-    min-height: 100vh;
-    margin: 0;
-    background-image: url('../images/Logo.png');
-    background-size: 100%; /* Reduce el tamaño de la imagen */
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-bottom: 60px; /* Ajusta según la altura del footer */
+
+/* Contenedor principal SIN fondo por defecto */
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Fondo SOLO para la página de inicio */
+.main-layout.with-background {
+  background-image: url('../images/Logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Área de contenido */
+.content-wrapper {
+  flex: 1;
+  padding-top: 70px; /* Ajusta según altura de tu navbar */
+  padding-bottom: 70px; /* Ajusta según altura de tu footer */
+  width: 100%;
+}
+
+/* Footer fijo */
+.footer {
+  background-color: #146c43;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 15px 0;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Estilos específicos para la página de inicio */
+.inicio-fondo {
+  min-height: calc(100vh - 140px); /* Ajusta según navbar + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
