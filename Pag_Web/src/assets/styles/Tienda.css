@@ -6,11 +6,35 @@
 }
 
 .tienda-fondo{
-    background-color: rgb(247, 46, 46);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
+    background-image: url('../images/Fondo_Tienda.png');
+    background-attachment: scroll;
+    background-size: cover;
+    
 }
-
-
+.contet-wrapper{
+    flex:1;
+    padding-top: 70px; /* Ajusta según altura de tu navbar */
+    padding-bottom: 70px; /* Ajusta según altura de tu footer */
+    width: 100%;
+}
+/* Footer fijo */
+.footer {
+  background-color: #146c43;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  padding: 15px 0;
+  color: white;
+}
+.footer p {
+  margin: 0;
+}
+/* Reset básico */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

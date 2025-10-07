@@ -5,27 +5,39 @@ import { useState } from 'react';
 function Login() {
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(true);
+  const [usuario, setUsuario] = useState('');
+  const [contraseña, setContraseña] = useState('');
 
   const handleLogin = () => {
-    // Aquí podrías validar usuario y contraseña
-    navigate('/=Usuario'); // 👈 Corregido a minúscula
+    // Validamos que ambos campos tengan contenido
+    if (!usuario.trim() || !contraseña.trim()) {
+      alert('Por favor, completa todos los campos');
+      return;
+
+    }else if (usuario !== 'admin' || contraseña !== 'admin123') {
+      alert('Usuario o contraseña incorrectos');
+      return;
+    }
+
+    
+    navigate('/Usuario');
   };
 
   const handleClose = () => {
     setShowLogin(false);
-    navigate('/'); // 👈 Redirige a la página de inicio (/) o usa '/inicio'
+    navigate('../');
   };
 
-  if (!showLogin) return null; 
+  if (!showLogin) return null;
 
   return (
     <div className="login-container">
       <div className="login-card">
-        <button 
-          type="button" 
-          className="btn-close" 
-          aria-label="Cerrar" 
-          onClick={handleClose} // 👈 Simplificado
+        <button
+          type="button"
+          className="btn-close"
+          aria-label="Cerrar"
+          onClick={handleClose}
         ></button>
 
         <div className="text-center mb-4">
@@ -33,29 +45,36 @@ function Login() {
           <p className="text-muted">Tu sitio para cultivar vida</p>
         </div>
 
-        <div className="login-form">
+        <form className="login-form needs-validation" noValidate>
           <h2 className="text-center mb-4">Bienvenido</h2>
 
           <div className="mb-3">
             <label className="form-label">Usuario</label>
-            <input 
-              type="text" 
-              className="form-control" 
+            <input
+              type="text"
+              className="form-control"
               placeholder="Ingresa tu usuario"
+              value={usuario}
+              onChange={(e) => setUsuario(e.target.value)}
+              required
             />
           </div>
 
           <div className="mb-4">
             <label className="form-label">Contraseña</label>
-            <input 
-              type="password" 
-              className="form-control" 
+            <input
+              type="password"
+              className="form-control"
               placeholder="Ingresa tu contraseña"
+              value={contraseña}
+              onChange={(e) => setContraseña(e.target.value)}
+              required
             />
           </div>
 
-          <button 
-            onClick={handleLogin} 
+          <button
+            type="button"
+            onClick={handleLogin}
             className="btn btn-success w-100 btn-lg"
           >
             Ingresar
@@ -64,7 +83,7 @@ function Login() {
           <p className="text-center text-muted mt-3 mb-0">
             ¿No tienes cuenta? <a href="#" className="text-success">Regístrate</a>
           </p>
-        </div>
+        </form>
       </div>
     </div>
   );

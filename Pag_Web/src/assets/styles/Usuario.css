@@ -1,0 +1,275 @@
+/* Contenedor principal */
+.usuario-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header del perfil */
+.usuario-header {
+  background: linear-gradient(135deg, #146c43 0%, #1a8754 100%);
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.usuario-avatar {
+  flex-shrink: 0;
+}
+
+.usuario-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.usuario-header-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.usuario-header-info h1 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.usuario-tipo {
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.usuario-registro {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 5px 0;
+}
+
+.usuario-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Contenido del perfil */
+.usuario-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Tarjetas de información */
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #146c43;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grid de información */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item input {
+  font-size: 1rem;
+}
+
+/* Grid de estadísticas */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  border-left: 4px solid #146c43;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #146c43;
+  font-weight: 700;
+}
+
+.stat-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Acciones del usuario */
+.usuario-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Botones personalizados */
+.btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #146c43;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0f5534;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(20, 108, 67, 0.3);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .usuario-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .usuario-header-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .usuario-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .usuario-container {
+    padding: 10px;
+  }
+
+  .usuario-header {
+    padding: 20px 15px;
+  }
+
+  .info-item p {
+    font-size: 1rem;
+  }
+}

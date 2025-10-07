@@ -6,7 +6,7 @@ function MainLayout() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
-  return (
+  return (  
     <div className={`main-layout ${isHome ? 'with-background' : ''}`}>
       <Navbar />
       <main className="content-wrapper">

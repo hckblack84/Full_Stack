@@ -13,10 +13,9 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Inicio />} />
         <Route path="usuario" element={<Usuario />} />
-        <Route path="tienda" element={<Tienda />} />
         <Route path="nosotros" element={<Nosotros />} />
       </Route>
-
+      <Route path="tienda" element={<Tienda />} />
       {/* 🔐 Login fuera del layout principal */}
       <Route path="/login" element={<Login />} />
     </Routes>

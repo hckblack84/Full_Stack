@@ -1,0 +1,30 @@
+/* Centrar la fila de cards */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo de la card personalizada */
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparente */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Bordes marcados */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  backdrop-filter: blur(10px); /* Efecto glassmorphism */
+  color: #a10000; /* Texto blanco para contraste */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover opcional */
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen centrada y responsive */
+.custom-card img {
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
