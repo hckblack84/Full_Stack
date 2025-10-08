@@ -31,6 +31,8 @@ function Login() {
   if (!showLogin) return null;
 
   return (
+    <div className="Inicio">
+      
     <div className="login-container">
       <div className="login-card">
         <button
@@ -81,10 +83,21 @@ function Login() {
           </button>
 
           <p className="text-center text-muted mt-3 mb-0">
-            ¿No tienes cuenta? <a href="#" className="text-success">Regístrate</a>
+            ¿No tienes cuenta?{" "}
+            <a
+              href="#"
+              className="text-success"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/Registro');
+              }}
+            >
+              Regístrate
+            </a>
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

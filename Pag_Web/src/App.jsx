@@ -5,6 +5,7 @@ import Login from './layouts/LoginLayout';
 import Tienda from './pages/Tienda';
 import Nosotros from './pages/Nosotros';
 import Usuario from './pages/Usuario';
+import Registro from './pages/Registro';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="tienda" element={<Tienda />} />
       {/* 🔐 Login fuera del layout principal */}
       <Route path="/login" element={<Login />} />
+      <Route path="/Registro" element={<Registro/>} />
     </Routes>
   );
 }
@@ -26,7 +28,6 @@ function App() {
 function Inicio() {
   return (
     <div className="inicio-fondo">
-      {/* Tu contenido de inicio aquí */}
       <h1>Bienvenido</h1>
     </div>
   );

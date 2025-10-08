@@ -1,4 +1,5 @@
 .login-container {
+  
   min-height: 10vh;
   display: flex;
   align-items: center;
@@ -16,7 +17,15 @@
   width: 100%;
   animation: slideIn 0.5s ease-out;
 }
-
+.Inicio{
+  background-color: #28a745;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 @keyframes slideIn {
   from {
     opacity: 0;

@@ -5,6 +5,24 @@
   padding: 20px;
 }
 
+.Inicio {
+  background-image: url('../images/LogoUsuarios.jpg');
+  background-attachment: fixed;
+  background-size: 1920px; /* Cambia entre 'cover', 'contain', o valores en px/% para ajustar */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  min-height: 10vh;
+  padding: 40px 0;
+}
+
+/* Para encoger o agrandar la imagen, ajusta background-size:
+   Ejemplo:
+   background-size: 200px 100px;   // tamaño específico
+   background-size: 50%;           // escala relativa
+   background-size: cover;         // cubre todo el contenedor
+   background-size: contain;       // ajusta la imagen dentro del contenedor
+*/
 /* Header del perfil */
 .usuario-header {
   background: linear-gradient(135deg, #146c43 0%, #1a8754 100%);

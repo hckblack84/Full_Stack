@@ -1,0 +1,227 @@
+/* Contenedor principal del formulario */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título del formulario */
+.container h2 {
+  color: #146c43;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 13px;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.568);
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 6px 20px rgba(20, 108, 67, 0.15);
+}
+
+/* Labels del formulario */
+.col-form-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Inputs del formulario */
+.form-control {
+    background-color: #ffffff34;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #146c43;
+  box-shadow: 0 0 0 0.2rem rgba(20, 108, 67, 0.15);
+  outline: none;
+}
+
+/* Input con error */
+.form-control.is-invalid {
+  border-color: #d80b1f;
+  background-image: none;
+}
+
+.form-control.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+/* Mensaje de error */
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Espaciado entre campos */
+.mb-3 {
+  margin-bottom: 30px;
+}
+
+/* Botón de registro */
+.btn-primary {
+  background: linear-gradient(135deg, #135536, #0fb366);
+  border: none;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(20, 108, 67, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0f5534, #146c43);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(20, 108, 67, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Sección de usuarios registrados */
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-4 h4 {
+  color: #146c43;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Lista de usuarios */
+.list-group {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+  border-left: 4px solid #146c43;
+}
+
+.list-group-item strong {
+  color: #146c43;
+  font-size: 1.1rem;
+}
+
+.list-group-item br + text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Animación de entrada para el formulario */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  form {
+    padding: 25px;
+  }
+
+  .container h2 {
+    font-size: 1.6rem;
+  }
+
+  .col-sm-2 {
+    margin-bottom: 5px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .list-group-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .col-form-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Efecto de foco suave en los inputs */
+.form-control:hover:not(:focus) {
+  border-color: #b8b8b8;
+}
+
+/* Mejora visual para inputs de tipo número */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 40px;
+}
+
+/* Estilo para el contenedor de texto central */
+.text-center {
+  margin-top: 30px;
+}
+
+/* Espaciado adicional para la lista */
+.mt-4 ul {
+  margin-top: 15px;
+}

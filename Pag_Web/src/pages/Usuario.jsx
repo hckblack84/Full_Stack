@@ -2,7 +2,7 @@ import '../assets/styles/Usuario.css';
 import { useState } from 'react';
 
 function Usuario() {
-  // Estado con datos de ejemplo (en el futuro vendrán del formulario/backend)
+  
   const [userData, setUserData] = useState({
     nombre: 'Juan Pérez',
     email: 'juan.perez@example.com',
@@ -31,6 +31,7 @@ function Usuario() {
   };
 
   return (
+    <div className="Inicio">
     <div className="usuario-container">
       <div className="usuario-header">
         <div className="usuario-avatar">
@@ -224,6 +225,7 @@ function Usuario() {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
