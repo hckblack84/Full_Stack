@@ -4,7 +4,7 @@ import { useState } from 'react';
 function Usuario() {
   
   const [userData, setUserData] = useState({
-    nombre: 'Juan Pérez',
+    nombre: 'Lucas Olmedo',
     email: 'juan.perez@example.com',
     telefono: '+56 9 1234 5678',
     direccion: 'Av. Principal 123, Melipilla',

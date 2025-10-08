@@ -8,6 +8,7 @@ function Registro() {
         
         <div className="inicio">
              <FormRegistro />
+             
              <MainLoyaut/>
             
         </div>
