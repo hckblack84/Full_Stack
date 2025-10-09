@@ -1,40 +1,509 @@
-.header{
-    background-color: #196dc2;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 2px solid #e0e0e0;
+/* ========================================================================== */
+/* tienda.css: ESTILOS ESPECÍFICOS DEL COMPONENTE             */
+/* ========================================================================== */
+
+/* --- 1. Estilos del Banner Principal --- */
+
+/* Contenedor principal del banner */
+.banner {
+  /* Fondo con degradado oscuro sobre la imagen */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('../images/LogoRegistro.png');
+  background-position: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  padding: -10px ;
+  text-align: center;
+  color: white;
+  position: relative; /* Necesario para posicionar el badge de oferta */
 }
 
-.tienda-fondo{
+/* Caja de contenido dentro del banner */
+.LogoFlotante{
+background-image: url('../images/Huerto_Hogar_1.png');
+    background-position: start;
+    background-repeat: no-repeat ;
+    padding-bottom: 2%;
+}
+.banner-contenido {
+    
+    padding: 10px;
+    border-radius: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-tierra);
+}
+
+/* Texto del logo dentro del banner */
+.logo-text {
+    /* Estilo del <h3> '🌱 HuertoHogar' */
+    margin: 0 0 10px;
+}
+.tienda-contenedor{
     background-image: url('../images/Fondo_Tienda.png');
-    background-attachment: scroll;
+    background-repeat: no-repeat ;
     background-size: cover;
+}
+
+/* Título principal del banner */
+.banner-titulo {
+    
+    padding-bottom: -10%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+/* Botón de llamada a la acción en el banner */
+.banner-boton {
+    background-color: var(--color-primario-verde);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Etiqueta de oferta flotante */
+.banner-oferta-badge {
+    position: absolute;
+    bottom: -30px; /* Lo saca un poco del banner */
+    right: 40px;
+    background-color: var(--color-badge-oferta);
+    border-radius: 50%; /* Lo hace redondo */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-tierra);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* --- 2. Estilos de Categorías --- */
+
+/* Contenedor de la lista de botones de categorías */
+.categorias-lista {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo base de cada botón de categoría */
+.categoria-boton {
+    padding: 15px 30px;
+    border-radius: 15px;
+    border: 2px solid var(--color-primario-verde);
+    background-color: white;
+    color: var(--color-tierra);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Estilo para la categoría que está activa/seleccionada */
+.categoria-activa {
+    border: 3px solid var(--color-badge-oferta); /* Borde de acento */
+    background-color: var(--color-primario-verde); /* Fondo verde */
+    color: white; /* Texto blanco */
+    box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3); /* Sombra para destacarla */
+}
+
+
+/* --- 3. Estilos de Productos (Grid) --- */
+
+/* Cuadrícula (Grid) de productos */
+.productos-grid {
+    display: grid;
+    /* Diseño responsivo con un mínimo de 280px por columna */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta individual de producto */
+.producto-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+/* Contenedor de la imagen para forzar dimensiones */
+.producto-imagen-contenedor {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de la imagen del producto */
+.producto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+/* Etiqueta de porcentaje de descuento (en oferta) */
+.producto-oferta-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-badge-oferta);
+    color: var(--color-tierra);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Nombre del producto */
+.producto-nombre {
+    color: var(--color-tierra);
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+/* Código del producto */
+.producto-codigo {
+    color: var(--color-texto-gris);
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Estrellas de calificación */
+.producto-calificacion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+/* Contenedor de precios */
+.producto-precio-info {
+    margin: 15px 0;
+}
+
+/* Precio original tachado (si hay oferta) */
+.precio-tachado {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Precio final / de oferta */
+.precio-final {
+    color: var(--color-primario-verde);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Texto de unidad (/kg) */
+.precio-unidad {
+    font-size: 0.9rem;
+    color: var(--color-texto-gris);
+}
+
+/* Botón "Añadir al carrito" de la tarjeta de producto */
+.producto-boton-agregar {
+    width: 100%;
+    background-color: var(--color-primario-verde);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+/* Efecto hover */
+.producto-boton-agregar:hover {
+    background-color: #267a48; /* Un poco más oscuro */
+}
+
+
+/* --- 4. Botón Flotante del Carrito --- */
+
+/* Contenedor/botón flotante en la esquina inferior izquierda */
+.carrito-flotante-boton {
+    position: end;
+    bottom: 20px;
+    left: 1500px;
+    background-color: var(--color-primario-verde);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     
 }
-.contet-wrapper{
-    flex:1;
-    padding-top: 70px; /* Ajusta según altura de tu navbar */
-    padding-bottom: 70px; /* Ajusta según altura de tu footer */
+
+/* Contador de artículos del carrito */
+.carrito-flotante-contador {
+    position: relative;
+    top: -1px;
+    right: -1px;
+    background-color: var(--color-badge-oferta);
+    color: var(--color-tierra);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* --- 5. Modal del Carrito --- */
+
+/* Fondo oscuro que cubre toda la pantalla cuando el modal está abierto */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Contenedor del modal */
+.carrito-modal {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 600px;
     width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-/* Footer fijo */
-.footer {
-  background-color: #146c43;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 100;
-  padding: 15px 0;
-  color: white;
+
+/* Encabezado del modal (Título y botón de cierre) */
+.modal-header {
+    padding: 20px;
+    border-bottom: 2px solid var(--color-fondo-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario-verde);
+    color: white;
 }
-.footer p {
-  margin: 0;
+
+/* Título del modal */
+.modal-titulo {
+    margin: 0;
+    font-size: 1.5rem;
 }
-/* Reset básico */
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+
+/* Icono dentro del título del modal */
+.modal-icono {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Botón para cerrar el modal */
+.modal-cerrar-boton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Cuerpo del modal (Lista de artículos) */
+.modal-cuerpo {
+    flex: 1; /* Permite que el cuerpo crezca y use el espacio disponible */
+    overflow: auto; /* Permite el scroll si hay muchos artículos */
+    padding: 20px;
+}
+
+/* Mensaje cuando el carrito está vacío */
+.carrito-vacio-mensaje {
+    text-align: center;
+    color: var(--color-texto-gris);
+    padding: 40px 0;
+}
+
+/* Artículo individual del carrito */
+.carrito-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-fondo-principal);
+    align-items: center;
+}
+
+/* Contenedor de la imagen del artículo */
+.carrito-item-imagen-contenedor {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+/* Imagen del artículo en el carrito */
+.carrito-item-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Detalles del artículo (nombre, precio) */
+.carrito-item-detalles {
+    flex: 1;
+}
+
+.carrito-item-nombre {
+    margin: 0 0 5px;
+    color: var(--color-tierra);
+}
+
+.carrito-item-precio-unitario {
+    margin: 0;
+    color: var(--color-primario-verde);
+    font-weight: bold;
+}
+
+/* Etiqueta de descuento en el carrito */
+.carrito-item-descuento-tag {
+    font-size: 0.8rem;
+    color: var(--color-badge-oferta);
+    font-weight: bold;
+}
+
+/* Controles de cantidad (+, -, eliminar) */
+.carrito-item-cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botones de control de cantidad (+, -) */
+.cantidad-boton {
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cantidad-restar {
+    background-color: var(--color-fondo-principal);
+}
+
+.cantidad-sumar {
+    background-color: var(--color-primario-verde);
+    color: white;
+}
+
+.cantidad-eliminar {
+    background-color: var(--color-rojo-eliminar);
+    color: white;
+    margin-left: 5px;
+}
+
+/* Display del valor de la cantidad */
+.cantidad-display {
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Subtotal por artículo */
+.carrito-item-subtotal {
+    text-align: right;
+    min-width: 80px;
+}
+
+.carrito-item-subtotal-texto {
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-primario-verde);
+}
+
+/* Pie de página del modal (Total y botón de pago) */
+.modal-footer {
+    padding: 20px;
+    border-top: 2px solid var(--color-fondo-principal);
+    background-color: var(--color-fondo-principal);
+}
+
+/* Contenedor del total */
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-tierra);
+}
+
+/* Valor del total */
+.carrito-total-valor {
+    color: var(--color-primario-verde);
+}
+
+/* Botón de proceder al pago */
+.checkout-boton {
+    width: 100%;
+    background-color: var(--color-primario-verde);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkout-boton:hover {
+    background-color: #267a48;
+}
+.seccion-principal {
+    padding: 20px;
+    background-color: rgb(187, 187, 151);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }

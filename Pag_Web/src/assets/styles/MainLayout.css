@@ -1,11 +1,16 @@
-/* Reset básico */
+/* 🧭 RESET GENERAL */
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Contenedor principal SIN fondo por defecto */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 🧩 CONTENEDOR PRINCIPAL */
 .main-layout {
   min-height: 100vh;
   display: flex;
@@ -13,46 +18,89 @@ html, body, #root {
   position: relative;
 }
 
-/* Fondo SOLO para la página de inicio */
+/* 🌄 FONDO SOLO EN HOME */
 .main-layout.with-background {
   background-image: url('../images/Logo.png');
- background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Área de contenido */
+/* 📦 CONTENIDO PRINCIPAL */
 .content-wrapper {
   flex: 1;
-  padding-top: 70px; /* Ajusta según altura de tu navbar */
-  padding-bottom: 70px; /* Ajusta según altura de tu footer */
+  padding-top: 70px; /* Espacio para navbar */
+  padding-bottom: 80px; /* Espacio para footer fijo */
   width: 100%;
 }
 
-/* Footer fijo */
+/* 🦶 FOOTER (una sola línea, limpio y centrado) */
 .footer {
   background-color: #146c43;
+  color: #fff;
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
   z-index: 100;
-  padding: 15px 0;
-  color: white;
-}
-
-.footer p {
-  margin: 0;
-}
-
-/* Estilos específicos para la página de inicio */
-.inicio-fondo {
-  min-height: calc(100vh - 140px); /* Ajusta según navbar + footer */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  padding: 20px;
+  padding: 10px 30px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  gap: 15px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌐 CONTENEDOR DE REDES SOCIALES */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* 🔗 ÍCONOS - Ajuste para usar el color original de la imagen */
+.footer-social a {
+  color: #fff; /* Esto sigue siendo útil si pones texto */
+  font-size: 22px; /* Establece un tamaño base (igual que el img) */
+  /* ... otros estilos ... */
+}
+
+/* 📍 IMÁGENES DE ICONOS */
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+
+/* 📝 TEXTO COPYRIGHT */
+.footer p {
+  font-weight: bolder ;
+  text-decoration: solid;
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
 }

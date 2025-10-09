@@ -6,7 +6,11 @@ import Tienda from './pages/Tienda';
 import Nosotros from './pages/Nosotros';
 import Usuario from './pages/Usuario';
 import Registro from './pages/Registro';
+// ...
+// Importación de estilos CSS externos
+import './assets/styles/Base.css';   
 
+// ...
 function App() {
   return (
     <Routes>
@@ -14,8 +18,9 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Inicio />} />
         <Route path="usuario" element={<Usuario />} />
-        <Route path="nosotros" element={<Nosotros />} />
+        
       </Route>
+      <Route path="nosotros" element={<Nosotros />} />
       <Route path="tienda" element={<Tienda />} />
       {/* 🔐 Login fuera del layout principal */}
       <Route path="/login" element={<Login />} />

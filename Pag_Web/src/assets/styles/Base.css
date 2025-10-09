@@ -1,0 +1,59 @@
+/* ========================================================================== */
+/* base.css: ESTILOS GLOBALES, VARIABLES Y UTILIDADES               */
+/* ========================================================================== */
+
+/* --- 1. Variables CSS (Colores y fuentes) --- */
+
+:root {
+    /* Paleta de colores principal */
+    --color-fondo-principal: #F7F7F7;        /* Gris claro para el fondo */
+    --color-primario-verde: #2E8B57;         /* Verde oscuro (Color principal) */
+    --color-secundario-verde: #3DA968;       /* Verde claro */
+    --color-tierra: #8B4513;                 /* Marrón (Color del texto principal/títulos) */
+    
+    /* Colores de acento */
+    --color-badge-oferta: #FFD700;           /* Amarillo dorado para ofertas */
+    --color-texto-gris: #666;                /* Gris medio para texto secundario */
+    --color-gris-claro-borde: #ccc;          /* Gris claro para bordes/sombras */
+    --color-rojo-eliminar: #dc3545;          /* Rojo para botones de eliminar */
+
+    /* Fuentes y tamaños */
+    --fuente-titulo: 'Arial', sans-serif;
+    --fuente-cuerpo: 'Helvetica', sans-serif;
+}
+
+
+/* --- 2. Estilos Globales / Reinicio --- */
+
+/* Estilos para el contenedor principal de la aplicación */
+.tienda-contenedor {
+    /* Establece el color de fondo y asegura que la altura mínima cubra toda la ventana */
+    background-color: var(--color-fondo-principal);
+    min-height: 100vh;
+    padding-bottom: 60px; /* Espacio para el botón flotante del carrito */
+}
+
+
+/* --- 3. Estilos de Tipografía y Secciones --- */
+
+/* Estilo para los títulos de sección (Categorías, Productos) */
+.seccion-titulo {
+    color: var(--color-tierra);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor principal de contenido */
+.seccion-principal {
+    padding: 40px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Estilo para texto de calificación */
+.calificacion-texto {
+    color: var(--color-texto-gris);
+    font-size: 0.9rem;
+    margin-left: 5px;
+}

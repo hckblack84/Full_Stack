@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/LoginLayout.css';
 import { useState } from 'react';
+import MainLoyaut from './MainLayout';
 
 function Login() {
   const navigate = useNavigate();
@@ -31,7 +32,10 @@ function Login() {
   if (!showLogin) return null;
 
   return (
+   
+
     <div className="Inicio">
+          <MainLoyaut/>
       
     <div className="login-container">
       <div className="login-card">

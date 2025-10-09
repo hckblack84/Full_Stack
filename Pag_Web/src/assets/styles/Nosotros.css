@@ -1,0 +1,55 @@
+
+.backgroundimage {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/LogoNosotros.jpg');
+  background-repeat: no-repeat;
+  background-position: start;
+background-size: cover ;
+  
+}
+
+.nosotros-page {
+background-color:transparent; 
+
+}
+
+
+
+/* Contenedor de la foto del equipo para darle un estilo circular o de avatar */
+.team-photo-placeholder {
+width: 100px;
+height: 100px;
+border-radius: 50%; /* Forma circular */
+background-color: beige; /* Fondo suave */
+border: 5px solid rgb(81, 228, 81); /* Borde verde para destacar */
+display:flex;
+align-items: center;
+justify-content: center;
+
+}
+
+/* Estilo para las tarjetas del equipo */
+.team-card {
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+border: 1px solid #e0e0e0;
+ height: 100%; /* Asegura que ambas tarjetas tengan la misma altura */
+}
+
+.team-card:hover {
+transform: translateY(5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.impact-section .col-md-4 {
+padding: 20px;
+border-radius: 8px;
+transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por los beneficios */
+.impact-section .col-md-4:hover {
+background-color: #f7fff7; /* Verde muy claro para el hover */
+}
+
+.impact-icon {
+    stroke-width: 2.5;
+}
