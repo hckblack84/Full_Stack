@@ -173,7 +173,7 @@ function TiendaHuertoHogar() {
     <div className="tienda-contenedor">
       
      
-/* Banner */
+
     <div className="banner">
         <h1> ''</h1>
       <div className='LogoFlotante'>
@@ -240,7 +240,7 @@ function TiendaHuertoHogar() {
                     <Star
                       key={i}
                       size={16}
-                      // Usa variables CSS para el fill/stroke si las definiste en Base.css
+                     
                       fill={i < producto.calificacion ? 'var(--color-badge-oferta)' : 'none'}
                       stroke={i < producto.calificacion ? 'var(--color-badge-oferta)' : '#ccc'}
                     />
@@ -275,7 +275,7 @@ function TiendaHuertoHogar() {
  
       </div>
 
-      {/* Botón flotante del carrito */}
+      
       <button
         onClick={() => setMostrarCarrito(true)}
         className="carrito-flotante-boton"

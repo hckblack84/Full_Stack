@@ -244,12 +244,10 @@ background-image: url('../images/Huerto_Hogar_1.png');
 }
 
 
-/* --- 4. Botón Flotante del Carrito --- */
 
-/* Contenedor/botón flotante en la esquina inferior izquierda */
 .carrito-flotante-boton {
     position: end;
-    bottom: 20px;
+    bottom: 5rem;
     left: 1500px;
     background-color: var(--color-primario-verde);
     color: white;
@@ -263,7 +261,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
     
 }
 
