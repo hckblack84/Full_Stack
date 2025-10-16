@@ -13,11 +13,11 @@ import miel from '../assets/images/miel.jpg';
 import queso from '../assets/images/queso.jpg';
 import leche from '../assets/images/leche.jpg';
 
-// Importar estilos
+// Importar styles
 import '../assets/styles/Base.css';
 import '../assets/styles/Tienda.css';
 
-// Datos de productos con imágenes locales
+// Datos de productos 
 const productos = [
   { 
     id: 'FR001', 
