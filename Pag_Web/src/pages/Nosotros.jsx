@@ -4,15 +4,18 @@ import '../assets/styles/Nosotros.css'; // Archivo CSS separado para decoracione
 import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener Bootstrap instalado
 import MainLayout from '../layouts/MainLayout';
 
+// ✅ Importamos la imagen
+import huertoImage from '../assets/images/Huerto_Hogar_2.png';
+
 function Nosotros() {
   return (
   <div className="backgroundimage">
-    <div className="container mt-0 mb-0 nosotros-page">
+    <div className="container nosotros-page">
     
       <header className="text-center mb-5">
         <h1 className="display-4 text-success fw-bold  ">Conoce al equipo detrás de HuertoHogar</h1>
         <p className="lead text-muted">
-          nuestra mision es llevar productos frescos  directamente a tu hogar
+          Nuestra mision es llevar productos frescos  directamente a tu hogar
         </p>
       </header>
 
@@ -107,6 +110,17 @@ descripcion                </p>
         </div>
 
       </section>
+
+        {/* 🌿 Imagen añadida debajo de la sección ambiental */}
+        <div className="text-center my-5">
+          <img
+            src={huertoImage}
+            alt="Huerto Hogar"
+            className="img-fluid rounded shadow"
+            style={{ maxWidth: '600px' }}
+          />
+        </div>
+
     </div>
 <MainLayout/>
   </div>

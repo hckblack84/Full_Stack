@@ -53,3 +53,31 @@ background-color: #f7fff7; /* Verde muy claro para el hover */
 .impact-icon {
     stroke-width: 2.5;
 }
+
+
+.text-muted {
+--bs-text-opacity: 1;
+color: black !important;
+}
+
+
+/* Elimina el espacio en la parte inferior */
+.nosotros-page {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Quita posibles espacios del body o background general */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Si tu fondo tiene imagen */
+.backgroundimage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

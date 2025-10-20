@@ -64,9 +64,9 @@ const productos = [
     calificacion: 5 
   },
   { 
-    id: 'VR002', 
+    id: 'FR004', 
     nombre: 'Frutillas Frescas', 
-    categoria: 'Verduras Orgánicas', 
+    categoria: 'Frutas Frescas', 
     precio: 2000, 
     imagen: espinacas, 
     stock: true, 
@@ -76,7 +76,7 @@ const productos = [
   },
   { 
     categoria: 'Productos Orgánicos', 
-    id: 'VR003', 
+    id: 'VR002', 
     nombre: 'Pimientos Tricolores', 
     categoria: 'Verduras Orgánicas', 
     precio: 2800, 

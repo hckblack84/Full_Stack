@@ -10,6 +10,9 @@ import Registro from './pages/Registro';
 // Importación de estilos CSS externos
 import './assets/styles/Base.css';   
 
+// 🖼 Importa la imagen local
+import HuertoHogarImg from './assets/images/Huerto_Hogar_1.png';
+
 // ...
 function App() {
   return (
@@ -33,7 +36,18 @@ function App() {
 function Inicio() {
   return (
     <div className="inicio-fondo">
-      <h1>Bienvenido</h1>
+      <h1 className="inicio-titulo">Bienvenido a HuertoHogar</h1>
+
+      <h2 className="inicio-subtitulo">Registrate a nustra pagina web, esta disponible para los usuarios que quieran realizar sus compras aqui.</h2>
+
+      {/* 🖼 Imagen centrada */}
+      <div className="inicio-imagen-container">
+        <img
+          src={HuertoHogarImg}
+          alt="Huerto Hogar"
+          className="inicio-imagen"
+        />
+      </div>
     </div>
   );
 }

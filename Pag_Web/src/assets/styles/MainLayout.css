@@ -4,6 +4,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -16,6 +17,9 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-y: auto; 
+  margin: 0;
+  padding: 0;
 }
 
 /* 🌄 FONDO SOLO EN HOME */
@@ -31,8 +35,10 @@ html, body, #root {
 .content-wrapper {
   flex: 1;
   padding-top: 70px; /* Espacio para navbar */
-  padding-bottom: 80px; /* Espacio para footer fijo */
+  padding-bottom: 120px; /* Espacio para footer fijo */
   width: 100%;
+  margin: 0;
+
 }
 
 /* 🦶 FOOTER (una sola línea, limpio y centrado) */
@@ -47,7 +53,7 @@ html, body, #root {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 12px 30px;
   font-family: "Segoe UI", sans-serif;
   font-size: 14px;
   gap: 15px;

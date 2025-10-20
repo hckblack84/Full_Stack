@@ -5,3 +5,80 @@ html, body {
   background: none;
   overflow-x: hidden; /* Evita scroll horizontal */
 }
+
+.inicio-fondo {
+  display: flex;
+  flex-direction: column; /* 🔽 uno debajo del otro */
+  align-items: center;    /* 🔄 centrados horizontalmente */
+  justify-content: center;
+  padding: 5.0px 20px;
+  text-align: center;
+}
+
+
+.inicio-titulo {
+  display: inline-block;
+  background-image: url('https://png.pngtree.com/background/20250120/original/pngtree-a-cartoon-style-vector-illustration-of-vegetable-garden-with-beets-picture-image_15857611.jpg'); /* ✅ Textura de hojas */
+  background-size: cover;
+  background-position: center;
+  color: #2f4f1f;
+  padding: 80px;
+  border-radius: 50%; /* 🔵 Forma circular */
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio-titulo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.inicio-subtitulo {
+  display: inline-block;
+  background: linear-gradient(135deg, #d6f5c2, #bde5a3); /* Degradado verde suave */
+  color: #2f4f1f;
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 20px auto 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-left: 6px solid #7abf57; /* 🌱 Detalle decorativo a la izquierda */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Animación al pasar el mouse */
+.inicio-subtitulo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.inicio-imagen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.inicio-imagen {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px; /* 🔵 Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* 🌫 Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Efecto al pasar el mouse */
+.inicio-imagen:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
