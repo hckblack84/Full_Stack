@@ -1,11 +1,13 @@
 import '../assets/styles/Usuario.css';
-import { useState } from 'react';
+import React,{ useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ IMPORTAR useNavigate
 
 function Usuario() {
+  const navigate = useNavigate(); // ✅ DECLARAR navigate AQUÍ
   
   const [userData, setUserData] = useState({
     nombre: 'Lucas Olmedo',
-    email: 'juan.perez@example.com',
+    email: 'Lucas.olmedo@example.com',
     telefono: '+56 9 1234 5678',
     direccion: 'Av. Principal 123, Melipilla',
     ciudad: 'Melipilla',
@@ -13,7 +15,7 @@ function Usuario() {
     fechaNacimiento: '15/03/1990',
     rut: '12.345.678-9',
     tipoUsuario: 'Cliente Premium',
-    fechaRegistro: '01/01/2024',
+    fechaRegistro: 'Hoy',
     pedidosRealizados: 12,
     productosFavoritos: 8
   });
@@ -28,6 +30,14 @@ function Usuario() {
     // Aquí guardarías los cambios
     setEditMode(false);
     alert('Cambios guardados correctamente');
+  };
+
+  // ✅ handleLogout DESPUÉS de declarar navigate
+  const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('usuario');
+    window.dispatchEvent(new Event('authChange'));
+    navigate('/');
   };
 
   return (
@@ -220,8 +230,12 @@ function Usuario() {
 
         {/* Botón de cerrar sesión */}
         <div className="usuario-actions">
-          <button className="btn btn-outline-danger">
-            🚪 Cerrar Sesión
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="btn btn-danger w-100 btn-lg"
+          >
+            Cerrar Sesión
           </button>
         </div>
       </div>

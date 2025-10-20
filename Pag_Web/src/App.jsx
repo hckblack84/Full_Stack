@@ -14,7 +14,7 @@ import './assets/styles/Base.css';
 function App() {
   return (
     <Routes>
-      {/* 🌿 Todas las rutas que comparten Navbar y Footer */}
+      
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Inicio />} />
         <Route path="usuario" element={<Usuario />} />
@@ -22,7 +22,7 @@ function App() {
       </Route>
       <Route path="nosotros" element={<Nosotros />} />
       <Route path="tienda" element={<Tienda />} />
-      {/* 🔐 Login fuera del layout principal */}
+      
       <Route path="/login" element={<Login />} />
       <Route path="/Registro" element={<Registro/>} />
     </Routes>
