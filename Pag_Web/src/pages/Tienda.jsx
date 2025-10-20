@@ -279,6 +279,7 @@ function TiendaHuertoHogar() {
       <button
         onClick={() => setMostrarCarrito(true)}
         className="carrito-flotante-boton"
+aria-label='abrir-carrito'
       >
         <ShoppingCart size={30} />
         {totalItems > 0 && (
@@ -352,6 +353,7 @@ function TiendaHuertoHogar() {
                         <button
                           onClick={() => eliminarDelCarrito(item.id)}
                           className="cantidad-boton cantidad-eliminar"
+aria-label={`eliminar ${item.nombre}`}
                         >
                           <Trash2 size={16} />
                         </button>

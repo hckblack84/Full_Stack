@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/styles/LoginLayout.css';
 import { useState } from 'react';
 import MainLoyaut from './MainLayout';
+import React from "react"
+
 
 function Login() {
   const navigate = useNavigate();
@@ -10,19 +12,30 @@ function Login() {
   const [contraseña, setContraseña] = useState('');
 
   const handleLogin = () => {
-    // Validamos que ambos campos tengan contenido
-    if (!usuario.trim() || !contraseña.trim()) {
-      alert('Por favor, completa todos los campos');
-      return;
+ 
+  if (!usuario.trim() || !contraseña.trim()) {
+    alert('Por favor, completa todos los campos');
+    return;
+  } else if (usuario !== 'admin' || contraseña !== 'admin123') {
+    alert('Usuario o contraseña incorrectos');
+    return;
+  }
 
-    }else if (usuario !== 'admin' || contraseña !== 'admin123') {
-      alert('Usuario o contraseña incorrectos');
-      return;
-    }
 
-    
-    navigate('/Usuario');
-  };
+  localStorage.setItem('isAuthenticated', 'true');
+  localStorage.setItem('usuario', usuario);
+
+  window.dispatchEvent(new Event('authChange'));
+  
+  navigate('/Usuario');
+};
+const handleLogout = () => {
+  localStorage.removeItem('isAuthenticated');
+  localStorage.removeItem('usuario');
+  window.dispatchEvent(new Event('authChange'));
+  navigate('/');
+};
+
 
   const handleClose = () => {
     setShowLogin(false);
@@ -57,6 +70,7 @@ function Login() {
           <div className="mb-3">
             <label className="form-label">Usuario</label>
             <input
+            id="usuario"
               type="text"
               className="form-control"
               placeholder="Ingresa tu usuario"
@@ -69,6 +83,7 @@ function Login() {
           <div className="mb-4">
             <label className="form-label">Contraseña</label>
             <input
+            id="contraseña"
               type="password"
               className="form-control"
               placeholder="Ingresa tu contraseña"
@@ -82,6 +97,7 @@ function Login() {
             type="button"
             onClick={handleLogin}
             className="btn btn-success w-100 btn-lg"
+            aria-label='Ingresar'
           >
             Ingresar
           </button>

@@ -1,10 +1,12 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../assets/styles/MainLayout.css";
-   import facebookIcon from "../assets/images/iconFacebook.png";
+import facebookIcon from "../assets/images/iconFacebook.png";
 import instagramIcon from "../assets/images/iconInstragram.jpg";
 import mapsIcon from "../assets/images/iconMaps.jpg";
 import factorioIcon from "../assets/images/iconFactorio.jpg";
+import React from "react"
+
 
 
 function MainLayout() {
