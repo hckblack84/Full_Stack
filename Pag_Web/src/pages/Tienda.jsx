@@ -13,11 +13,11 @@ import miel from '../assets/images/miel.jpg';
 import queso from '../assets/images/queso.jpg';
 import leche from '../assets/images/leche.jpg';
 
-// Importar estilos
+// Importar styles
 import '../assets/styles/Base.css';
 import '../assets/styles/Tienda.css';
 
-// Datos de productos con imágenes locales
+// Datos de productos 
 const productos = [
   { 
     id: 'FR001', 
@@ -173,7 +173,7 @@ function TiendaHuertoHogar() {
     <div className="tienda-contenedor">
       
      
-/* Banner */
+
     <div className="banner">
         <h1> ''</h1>
       <div className='LogoFlotante'>
@@ -240,7 +240,7 @@ function TiendaHuertoHogar() {
                     <Star
                       key={i}
                       size={16}
-                      // Usa variables CSS para el fill/stroke si las definiste en Base.css
+                     
                       fill={i < producto.calificacion ? 'var(--color-badge-oferta)' : 'none'}
                       stroke={i < producto.calificacion ? 'var(--color-badge-oferta)' : '#ccc'}
                     />
@@ -275,10 +275,11 @@ function TiendaHuertoHogar() {
  
       </div>
 
-      {/* Botón flotante del carrito */}
+      
       <button
         onClick={() => setMostrarCarrito(true)}
         className="carrito-flotante-boton"
+aria-label='abrir-carrito'
       >
         <ShoppingCart size={30} />
         {totalItems > 0 && (
@@ -352,6 +353,7 @@ function TiendaHuertoHogar() {
                         <button
                           onClick={() => eliminarDelCarrito(item.id)}
                           className="cantidad-boton cantidad-eliminar"
+aria-label={`eliminar ${item.nombre}`}
                         >
                           <Trash2 size={16} />
                         </button>

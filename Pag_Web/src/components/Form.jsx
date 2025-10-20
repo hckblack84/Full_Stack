@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../assets/styles/Form.css';
 import { useNavigate } from 'react-router-dom';
-
+import React from "react"
 function FormRegistro() {
     const [formData, setFormData] = useState({
         nombre: "",
