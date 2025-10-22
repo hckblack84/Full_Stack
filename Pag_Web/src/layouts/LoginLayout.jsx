@@ -16,7 +16,7 @@ function Login() {
   if (!usuario.trim() || !contraseña.trim()) {
     alert('Por favor, completa todos los campos');
     return;
-  } else if (usuario !== 'admin' || contraseña !== 'admin123') {
+  } else if (usuario !== 'admin@duocuc.cl' || contraseña !== 'admin123') {
     alert('Usuario o contraseña incorrectos');
     return;
   }

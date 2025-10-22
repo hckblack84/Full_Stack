@@ -3,30 +3,25 @@ import { MemoryRouter } from 'react-router-dom';
 import React from "react"
 import Login from "./LoginLayout";
 
-// Mockear useNavigate
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockNavigate,
 }));
 
-// Mockear MainLayout
 jest.mock('./MainLayout', () => {
     return function MainLayout() {
         return <div>MainLayout Mock</div>;
     };
 });
 
-// ✅ CORRECCIÓN: Crear mocks antes de asignarlos
 const mockSetItem = jest.fn();
 const mockGetItem = jest.fn();
 const mockRemoveItem = jest.fn();
 const mockDispatchEvent = jest.fn();
 
-// Mockear alert
 global.alert = jest.fn();
 
-// ✅ Asignar los mocks correctamente
 Object.defineProperty(window, 'localStorage', {
     value: {
         getItem: mockGetItem,
@@ -37,7 +32,6 @@ Object.defineProperty(window, 'localStorage', {
     writable: true
 });
 
-// ✅ Mockear dispatchEvent correctamente
 window.dispatchEvent = mockDispatchEvent;
 
 beforeEach(() => {
@@ -69,13 +63,12 @@ describe('Login Component', () => {
         const passwordInput = screen.getByPlaceholderText('Ingresa tu contraseña');
         const loginButton = screen.getByText('Ingresar');
 
-        fireEvent.change(usuarioInput, { target: { value: 'admin' } });
+        fireEvent.change(usuarioInput, { target: { value: 'admin@duocuc.cl' } });
         fireEvent.change(passwordInput, { target: { value: 'admin123' } });
         fireEvent.click(loginButton);
 
-        // ✅ Ahora funcionará correctamente
         expect(mockSetItem).toHaveBeenCalledWith('isAuthenticated', 'true');
-        expect(mockSetItem).toHaveBeenCalledWith('usuario', 'admin');
+        expect(mockSetItem).toHaveBeenCalledWith('usuario', 'admin@duocuc.cl');
         expect(mockDispatchEvent).toHaveBeenCalled();
         expect(mockNavigate).toHaveBeenCalledWith('/Usuario');
         expect(global.alert).not.toHaveBeenCalled();

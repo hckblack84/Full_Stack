@@ -120,6 +120,17 @@ const productos = [
   }
 ];
 
+const tieneDescuentoDuoc = (correo) => {
+  return correo && correo.includes('@duocuc.cl');
+};
+
+const calcularPrecioFinal = (precio, descuento, aplicarDescuento = true) => {
+  if (!aplicarDescuento) {
+    return precio;
+  }
+  return precio - (precio * descuento / 100);
+};
+
 const categorias = ['Todas', 'Frutas Frescas', 'Verduras Orgánicas', 'Productos Orgánicos', 'Productos Lácteos'];
 
 function TiendaHuertoHogar() {
@@ -185,8 +196,8 @@ function TiendaHuertoHogar() {
         </button>
       </div>
 </div>
-      <div className="banner-oferta-badge">
-        🎉 20%
+      <div className="Descuento" style={{color:'#ffffffff',fontSize : '30px'}}>
+        🎉 20% Para estudiantes del duoc! 🎉
       </div>
     </div>
 
