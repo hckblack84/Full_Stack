@@ -42,7 +42,6 @@ describe('Usuario Component', () => {
             </MemoryRouter>
         );
 
-        // Usar getByRole para el h1
         expect(screen.getByRole('heading', { name: 'Lucas Olmedo' })).toBeInTheDocument();
         expect(screen.getByText('Lucas.olmedo@example.com')).toBeInTheDocument();
         expect(screen.getByText('+56 9 1234 5678')).toBeInTheDocument();
@@ -72,7 +71,6 @@ describe('Usuario Component', () => {
 
         fireEvent.click(screen.getByText('✏️ Editar Perfil'));
 
-        // Hay dos inputs con "Lucas Olmedo", usar getAllByDisplayValue y tomar el primero
         const inputs = screen.getAllByDisplayValue('Lucas Olmedo');
         const nombreInput = inputs[0];
         
