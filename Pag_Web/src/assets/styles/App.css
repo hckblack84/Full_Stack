@@ -16,21 +16,7 @@ html, body {
 }
 
 
-.inicio-titulo {
-  display: inline-block;
-  background-image: url('https://png.pngtree.com/background/20250120/original/pngtree-a-cartoon-style-vector-illustration-of-vegetable-garden-with-beets-picture-image_15857611.jpg'); /* ✅ Textura de hojas */
-  background-size: cover;
-  background-position: center;
-  color: #2f4f1f;
-  padding: 80px;
-  border-radius: 50%; /* 🔵 Forma circular */
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  margin: 40px auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .inicio-titulo:hover {
   transform: scale(1.05);
@@ -81,4 +67,3 @@ html, body {
   transform: scale(1.03);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
-

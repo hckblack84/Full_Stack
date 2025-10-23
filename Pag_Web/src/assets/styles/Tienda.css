@@ -1,12 +1,5 @@
-/* ========================================================================== */
-/* tienda.css: ESTILOS ESPECÍFICOS DEL COMPONENTE             */
-/* ========================================================================== */
 
-/* --- 1. Estilos del Banner Principal --- */
-
-/* Contenedor principal del banner */
 .banner {
-  /* Fondo con degradado oscuro sobre la imagen */
   background-image:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url('../images/LogoRegistro.png');
@@ -14,20 +7,15 @@
   background-repeat: no-repeat;
   background-size: cover;
     border-radius: 20px;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
   padding: -10px ;
   text-align: center;
   color: white;
-  position: relative; /* Necesario para posicionar el badge de oferta */
+  position: relative;
 }
 
-/* Caja de contenido dentro del banner */
-.LogoFlotante{
-background-image: url('../images/Huerto_Hogar_1.png');
-    background-position: start;
-    background-repeat: no-repeat ;
-    padding-bottom: 2%;
-}
+
+
 .banner-contenido {
     
     padding: 10px;
@@ -37,27 +25,29 @@ background-image: url('../images/Huerto_Hogar_1.png');
     color: var(--color-tierra);
 }
 
-/* Texto del logo dentro del banner */
 .logo-text {
-    /* Estilo del <h3> '🌱 HuertoHogar' */
+   
     margin: 0 0 10px;
 }
 .tienda-contenedor{
-    background-image: url('../images/Fondo_Tienda.png');
-    background-repeat: no-repeat ;
+    background-image: url('../images/newFondo.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-/* Título principal del banner */
 .banner-titulo {
-    
     padding-bottom: -10%;
     text-align: center;
     font-size: 2.5rem;
     margin: 0 0 10px;
 }
 
-/* Botón de llamada a la acción en el banner */
+
 .banner-boton {
     background-color: var(--color-primario-verde);
     color: white;
@@ -70,13 +60,13 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin-top: 20px;
 }
 
-/* Etiqueta de oferta flotante */
+
 .banner-oferta-badge {
     position: absolute;
-    bottom: -30px; /* Lo saca un poco del banner */
+    bottom: -30px; 
     right: 40px;
     background-color: var(--color-badge-oferta);
-    border-radius: 50%; /* Lo hace redondo */
+    border-radius: 50%;
     width: 80px;
     height: 80px;
     display: flex;
@@ -89,9 +79,6 @@ background-image: url('../images/Huerto_Hogar_1.png');
 }
 
 
-/* --- 2. Estilos de Categorías --- */
-
-/* Contenedor de la lista de botones de categorías */
 .categorias-lista {
     display: flex;
     gap: 20px;
@@ -100,7 +87,6 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin-bottom: 40px;
 }
 
-/* Estilo base de cada botón de categoría */
 .categoria-boton {
     padding: 15px 30px;
     border-radius: 15px;
@@ -122,9 +108,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
 }
 
 
-/* --- 3. Estilos de Productos (Grid) --- */
 
-/* Cuadrícula (Grid) de productos */
 .productos-grid {
     display: grid;
     /* Diseño responsivo con un mínimo de 280px por columna */
@@ -132,7 +116,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     gap: 25px;
 }
 
-/* Tarjeta individual de producto */
+
 .producto-card {
     background-color: white;
     border-radius: 20px;
@@ -142,7 +126,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     position: relative;
 }
 
-/* Contenedor de la imagen para forzar dimensiones */
+
 .producto-imagen-contenedor {
     width: 100%;
     height: 200px;
@@ -151,14 +135,14 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin-bottom: 15px;
 }
 
-/* Estilo de la imagen del producto */
+
 .producto-imagen {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    object-fit: cover; 
 }
 
-/* Etiqueta de porcentaje de descuento (en oferta) */
+
 .producto-oferta-tag {
     position: absolute;
     top: 15px;
@@ -171,21 +155,21 @@ background-image: url('../images/Huerto_Hogar_1.png');
     font-weight: bold;
 }
 
-/* Nombre del producto */
+
 .producto-nombre {
     color: var(--color-tierra);
     font-size: 1.3rem;
     margin: 10px 0;
 }
 
-/* Código del producto */
+
 .producto-codigo {
     color: var(--color-texto-gris);
     font-size: 0.9rem;
     margin: 5px 0;
 }
 
-/* Estrellas de calificación */
+
 .producto-calificacion {
     display: flex;
     align-items: center;
@@ -193,12 +177,12 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin: 10px 0;
 }
 
-/* Contenedor de precios */
+
 .producto-precio-info {
     margin: 15px 0;
 }
 
-/* Precio original tachado (si hay oferta) */
+
 .precio-tachado {
     color: #999;
     text-decoration: line-through;
@@ -206,7 +190,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin: 0;
 }
 
-/* Precio final / de oferta */
+
 .precio-final {
     color: var(--color-primario-verde);
     font-size: 1.8rem;
@@ -214,13 +198,13 @@ background-image: url('../images/Huerto_Hogar_1.png');
     margin: 5px 0;
 }
 
-/* Texto de unidad (/kg) */
+
 .precio-unidad {
     font-size: 0.9rem;
     color: var(--color-texto-gris);
 }
 
-/* Botón "Añadir al carrito" de la tarjeta de producto */
+
 .producto-boton-agregar {
     width: 100%;
     background-color: var(--color-primario-verde);
@@ -238,9 +222,9 @@ background-image: url('../images/Huerto_Hogar_1.png');
     transition: background-color 0.2s;
 }
 
-/* Efecto hover */
+
 .producto-boton-agregar:hover {
-    background-color: #267a48; /* Un poco más oscuro */
+    background-color: #267a48; 
 }
 
 
@@ -265,7 +249,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     
 }
 
-/* Contador de artículos del carrito */
+
 .carrito-flotante-contador {
     position: relative;
     top: -1px;
@@ -283,16 +267,14 @@ background-image: url('../images/Huerto_Hogar_1.png');
 }
 
 
-/* --- 5. Modal del Carrito --- */
 
-/* Fondo oscuro que cubre toda la pantalla cuando el modal está abierto */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,7 +282,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     padding: 20px;
 }
 
-/* Contenedor del modal */
+
 .carrito-modal {
     background-color: white;
     border-radius: 20px;
@@ -312,7 +294,7 @@ background-image: url('../images/Huerto_Hogar_1.png');
     flex-direction: column;
 }
 
-/* Encabezado del modal (Título y botón de cierre) */
+
 .modal-header {
     padding: 20px;
     border-bottom: 2px solid var(--color-fondo-principal);

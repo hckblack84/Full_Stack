@@ -221,7 +221,7 @@ function TiendaHuertoHogar() {
       
       <div className="banner">
         <h1> ''</h1>
-        <div className='LogoFlotante'>
+        <div className='HOlas'>
           <div className="banner-contenido">
             <h3 className="logo-text"> </h3>
             <h2 className="banner-titulo">🍎Frescura directa a tu mesa🍊</h2>
@@ -241,34 +241,32 @@ function TiendaHuertoHogar() {
         {/* Alerta de descuento DuocUC */}
         {isAuthenticated && tieneDescuentoDuoc(usuario) && (
           <div className="alerta-descuento alerta-activo">
-            <Mail size={24} />
-            <div>
-              <p className="alerta-titulo">¡Descuentos DuocUC activos!</p>
-              <p className="alerta-subtitulo">Estás usando: {usuario}</p>
+          
+            <div className="d-flex justify-content-center">
+              <p className="text-success text-sm-left">¡Descuentos DuocUC activos!  <Mail size={24} /></p>
             </div>
           </div>
         )}
 
         {isAuthenticated && !tieneDescuentoDuoc(usuario) && (
           <div className="alerta-descuento alerta-inactivo">
-            <Mail size={24} />
+           
             <div>
               <p className="alerta-titulo">Usa tu correo @duocuc.cl para obtener descuentos exclusivos</p>
-              <p className="alerta-subtitulo">Tu correo actual: {usuario}</p>
             </div>
           </div>
         )}
 
         {!isAuthenticated && (
           <div className="alerta-descuento alerta-login">
-            <Mail size={24} />
+            
             <div>
               <p className="alerta-titulo">Inicia sesión con tu correo @duocuc.cl para obtener descuentos</p>
             </div>
           </div>
         )}
 
-        <h2 className="seccion-titulo">
+        <h2 className="seccion-titulo ">
           Categorías destacadas
         </h2>
 

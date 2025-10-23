@@ -1,9 +1,10 @@
 
 .backgroundimage {
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/LogoNosotros.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url('../images/newFondo.jpg');
   background-repeat: no-repeat;
-  background-position: start;
-background-size: cover ;
+  
+  background-size: a ;
+  background-position:absolute ;
   
 }
 
@@ -14,13 +15,13 @@ background-color:transparent;
 
 
 
-/* Contenedor de la foto del equipo para darle un estilo circular o de avatar */
+
 .team-photo-placeholder {
 width: 100px;
 height: 100px;
-border-radius: 50%; /* Forma circular */
-background-color: beige; /* Fondo suave */
-border: 5px solid rgb(81, 228, 81); /* Borde verde para destacar */
+border-radius: 50%;
+background-color: beige; 
+border: 5px solid rgb(81, 228, 81); 
 display:flex;
 align-items: center;
 justify-content: center;
@@ -67,17 +68,33 @@ color: black !important;
   padding-bottom: 0 !important;
 }
 
-/* Quita posibles espacios del body o background general */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 
-/* Si tu fondo tiene imagen */
+
 .backgroundimage {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.mapa-contenedor {
+    position: relative;
+   
+    width: 90%; 
+    max-width:600px; 
+    margin: 20px auto; 
+    padding-bottom: 56.25%;
+    height: 0; 
+    
+    
+    border-radius: 15px; 
+    overflow: hidden;
+}
+    .mapa-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border: 0;
+  
 }

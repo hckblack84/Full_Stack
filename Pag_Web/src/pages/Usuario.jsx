@@ -1,6 +1,7 @@
 import '../assets/styles/Usuario.css';
 import React,{ useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ IMPORTAR useNavigate
+import { useNavigate } from 'react-router-dom'; 
+import MainLoyaut from '../layouts/MainLayout';
 
 function Usuario() {
   const navigate = useNavigate(); // ✅ DECLARAR navigate AQUÍ
@@ -16,8 +17,8 @@ function Usuario() {
     rut: '12.345.678-9',
     tipoUsuario: 'Cliente Premium',
     fechaRegistro: 'Hoy',
-    pedidosRealizados: 12,
-    productosFavoritos: 8
+    pedidosRealizados: 0,
+    productosFavoritos: 1
   });
 
   const [editMode, setEditMode] = useState(false);
@@ -27,12 +28,12 @@ function Usuario() {
   };
 
   const handleSave = () => {
-    // Aquí guardarías los cambios
+
     setEditMode(false);
     alert('Cambios guardados correctamente');
   };
 
-  // ✅ handleLogout DESPUÉS de declarar navigate
+
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('usuario');
@@ -42,6 +43,8 @@ function Usuario() {
 
   return (
     <div className="Inicio">
+    <MainLoyaut/>
+
     <div className="usuario-container">
       <div className="usuario-header">
         <div className="usuario-avatar">
